@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #242424;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner{
+    height: 400px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f6e9d9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: rotate 6s linear infinite;
+}
+
+.spinner img{
+    object-fit: contain;
+    max-width: 400px;
+    max-height: 230px;
+    transform: translate(10%);
+    animation: jump 0.3s linear alternate infinite
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(20%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
